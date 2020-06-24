@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TimePickerViewController" customModule="ToDo" customModuleProvider="target">
+            <connections>
+                <outlet property="dialogBoxView" destination="i5m-Gc-3rf" id="TDZ-FB-1mf"/>
+                <outlet property="selectTimeLabel" destination="qcD-3h-BNa" id="V8x-wj-98q"/>
+                <outlet property="setTimeButton" destination="aGI-sp-Agd" id="OW9-o1-HOD"/>
+                <outlet property="timePickedLabel" destination="8rK-yG-Kss" id="mjb-Bk-zxL"/>
+                <outlet property="timePicker" destination="heP-JZ-NgO" id="Xhy-Ze-Nxk"/>
+                <outlet property="timeview" destination="3qI-KZ-qUf" id="cGZ-uG-T28"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i5m-Gc-3rf" userLabel="Dialog Biox View">
+                    <rect key="frame" x="27.666666666666657" y="216" width="320" height="380"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select start time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcD-3h-BNa">
+                            <rect key="frame" x="20" y="18" width="298" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8rK-yG-Kss" userLabel="Time Picked">
+                            <rect key="frame" x="20" y="41" width="133" height="24"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3qI-KZ-qUf" userLabel="Time View">
+                            <rect key="frame" x="0.0" y="79" width="320" height="224"/>
+                            <subviews>
+                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="heP-JZ-NgO" userLabel="TIme Picker">
+                                    <rect key="frame" x="0.0" y="4" width="320" height="216"/>
+                                    <connections>
+                                        <action selector="timePickerChanged:" destination="-1" eventType="valueChanged" id="mcG-lt-y6D"/>
+                                    </connections>
+                                </datePicker>
+                            </subviews>
+                            <color key="backgroundColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="heP-JZ-NgO" firstAttribute="top" secondItem="3qI-KZ-qUf" secondAttribute="top" constant="4" id="8K9-lO-GrU"/>
+                                <constraint firstItem="heP-JZ-NgO" firstAttribute="centerX" secondItem="3qI-KZ-qUf" secondAttribute="centerX" id="VW9-SQ-QXn"/>
+                                <constraint firstAttribute="bottom" secondItem="heP-JZ-NgO" secondAttribute="bottom" constant="4" id="iGD-cq-yqB"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="58" translatesAutoresizingMaskIntoConstraints="NO" id="jGx-eb-EXw">
+                            <rect key="frame" x="20" y="317" width="280" height="45"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGI-sp-Agd" userLabel="Set Button">
+                                    <rect key="frame" x="0.0" y="0.0" width="111" height="45"/>
+                                    <color key="backgroundColor" red="0.92549019610000005" green="0.38431372549999998" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="cB7-jD-kcp"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <state key="normal" title="Set Time">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="setTimePressed:" destination="-1" eventType="touchUpInside" id="iWU-PM-p9b"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="603-2T-TFJ" userLabel="Dismiss Button">
+                                    <rect key="frame" x="169" y="0.0" width="111" height="45"/>
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                    <state key="normal" title="Dismiss">
+                                        <color key="titleColor" red="0.92549019610000005" green="0.38431372549999998" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="dismissButtonPressed:" destination="-1" eventType="touchUpInside" id="nRJ-MW-7GE"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.25490196079999999" green="0.25490196079999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="3qI-KZ-qUf" secondAttribute="trailing" id="1ph-Mu-3rh"/>
+                        <constraint firstItem="8rK-yG-Kss" firstAttribute="top" secondItem="qcD-3h-BNa" secondAttribute="bottom" constant="6" id="51Z-DA-7qL"/>
+                        <constraint firstItem="qcD-3h-BNa" firstAttribute="top" secondItem="i5m-Gc-3rf" secondAttribute="top" constant="18" id="95d-Uo-WmL"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="320" id="AXt-Oc-nWL"/>
+                        <constraint firstItem="8rK-yG-Kss" firstAttribute="leading" secondItem="i5m-Gc-3rf" secondAttribute="leading" constant="20" id="AZf-pZ-RhS"/>
+                        <constraint firstItem="qcD-3h-BNa" firstAttribute="leading" secondItem="i5m-Gc-3rf" secondAttribute="leading" constant="20" id="Ep8-0i-vdv"/>
+                        <constraint firstItem="3qI-KZ-qUf" firstAttribute="top" secondItem="8rK-yG-Kss" secondAttribute="bottom" constant="14" id="Mcu-E4-sch"/>
+                        <constraint firstItem="jGx-eb-EXw" firstAttribute="leading" secondItem="i5m-Gc-3rf" secondAttribute="leading" constant="20" id="T6f-iH-7Bn"/>
+                        <constraint firstItem="jGx-eb-EXw" firstAttribute="top" secondItem="3qI-KZ-qUf" secondAttribute="bottom" constant="14" id="a4s-iN-ejT"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="320" id="bv6-d5-eoH"/>
+                        <constraint firstAttribute="trailing" secondItem="jGx-eb-EXw" secondAttribute="trailing" constant="20" id="ciT-56-xeP"/>
+                        <constraint firstItem="3qI-KZ-qUf" firstAttribute="leading" secondItem="i5m-Gc-3rf" secondAttribute="leading" id="lsp-2A-j5z"/>
+                        <constraint firstAttribute="trailing" secondItem="qcD-3h-BNa" secondAttribute="trailing" constant="2" id="mWb-th-Dvb"/>
+                        <constraint firstAttribute="trailing" secondItem="8rK-yG-Kss" secondAttribute="trailing" constant="167" id="su1-Ud-wSY"/>
+                        <constraint firstAttribute="bottom" secondItem="jGx-eb-EXw" secondAttribute="bottom" constant="18" id="xn6-wW-yHU"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="i5m-Gc-3rf" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="JmS-N8-5ez"/>
+                <constraint firstItem="i5m-Gc-3rf" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Nm7-VU-J4f"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="133.59999999999999" y="131.52709359605913"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController" customModule="ToDo" customModuleProvider="target">
+            <connections>
+                <outlet property="addToDo" destination="e6K-Ck-BW1" id="vec-RP-QKR"/>
+                <outlet property="tabBar" destination="4OW-Q0-SO3" id="1hm-3F-Vzk"/>
+                <outlet property="toDoListView" destination="Mrl-WF-urs" id="oSC-Ot-zUZ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Mrl-WF-urs" userLabel="ToDo List View">
+                    <rect key="frame" x="0.0" y="44" width="414" height="748"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4OW-Q0-SO3">
+                    <rect key="frame" x="0.0" y="792" width="414" height="70"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="70" id="deh-e8-993"/>
+                    </constraints>
+                    <items>
+                        <tabBarItem id="e6K-Ck-BW1" userLabel="Add ToDo"/>
+                    </items>
+                    <color key="tintColor" red="0.92549019610000005" green="0.38431372549999998" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="barTintColor" red="0.25490196079999999" green="0.25490196079999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="selectedImageTintColor" red="0.92549019610000005" green="0.38431372549999998" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </tabBar>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="4OW-Q0-SO3" firstAttribute="top" secondItem="Mrl-WF-urs" secondAttribute="bottom" id="4A1-iN-nMR"/>
+                <constraint firstAttribute="trailing" secondItem="Mrl-WF-urs" secondAttribute="trailing" id="DfU-96-iKh"/>
+                <constraint firstItem="4OW-Q0-SO3" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="SWB-Y1-3bW"/>
+                <constraint firstAttribute="trailing" secondItem="4OW-Q0-SO3" secondAttribute="trailing" id="Vfm-s6-9ZU"/>
+                <constraint firstItem="Mrl-WF-urs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="WH6-Uq-hpi"/>
+                <constraint firstItem="Mrl-WF-urs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Xy8-Zn-aIs"/>
+                <constraint firstItem="4OW-Q0-SO3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kaa-nI-kcx"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="150.66964285714286"/>
+        </view>
+    </objects>
+</document>

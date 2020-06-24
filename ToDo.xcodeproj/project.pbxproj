@@ -7,23 +7,43 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF2B9318249B7A4A00BE56E7 /* CreateToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B9316249B7A4A00BE56E7 /* CreateToDoViewController.swift */; };
+		FF2B9319249B7A4A00BE56E7 /* CreateToDoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2B9317249B7A4A00BE56E7 /* CreateToDoViewController.xib */; };
+		FF2B934024A0C22300BE56E7 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B933E24A0C22300BE56E7 /* TimePickerViewController.swift */; };
+		FF2B934124A0C22300BE56E7 /* TimePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2B933F24A0C22300BE56E7 /* TimePickerViewController.xib */; };
+		FF2B934A24A201AB00BE56E7 /* TimeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B934824A201AB00BE56E7 /* TimeCell.swift */; };
+		FF2B934B24A201AB00BE56E7 /* TimeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2B934924A201AB00BE56E7 /* TimeCell.xib */; };
 		FFE3B068249A2C7100BDF6CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3B067249A2C7100BDF6CF /* AppDelegate.swift */; };
 		FFE3B06A249A2C7100BDF6CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3B069249A2C7100BDF6CF /* SceneDelegate.swift */; };
 		FFE3B06C249A2C7100BDF6CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3B06B249A2C7100BDF6CF /* ViewController.swift */; };
-		FFE3B06F249A2C7100BDF6CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B06D249A2C7100BDF6CF /* Main.storyboard */; };
 		FFE3B071249A2C7C00BDF6CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B070249A2C7C00BDF6CF /* Assets.xcassets */; };
 		FFE3B074249A2C7C00BDF6CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B072249A2C7C00BDF6CF /* LaunchScreen.storyboard */; };
+		FFE3B07E249A37AF00BDF6CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3B07C249A37AF00BDF6CF /* MainViewController.swift */; };
+		FFE3B07F249A37AF00BDF6CF /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B07D249A37AF00BDF6CF /* MainViewController.xib */; };
+		FFE3B083249B2B2800BDF6CF /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3B081249B2B2800BDF6CF /* ToDoCell.swift */; };
+		FFE3B084249B2B2800BDF6CF /* ToDoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B082249B2B2800BDF6CF /* ToDoCell.xib */; };
+		FFE3B087249B338400BDF6CF /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3B086249B338400BDF6CF /* ToDoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF2B9316249B7A4A00BE56E7 /* CreateToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateToDoViewController.swift; sourceTree = "<group>"; };
+		FF2B9317249B7A4A00BE56E7 /* CreateToDoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateToDoViewController.xib; sourceTree = "<group>"; };
+		FF2B933E24A0C22300BE56E7 /* TimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
+		FF2B933F24A0C22300BE56E7 /* TimePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimePickerViewController.xib; sourceTree = "<group>"; };
+		FF2B934824A201AB00BE56E7 /* TimeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCell.swift; sourceTree = "<group>"; };
+		FF2B934924A201AB00BE56E7 /* TimeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimeCell.xib; sourceTree = "<group>"; };
 		FFE3B064249A2C7100BDF6CF /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE3B067249A2C7100BDF6CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE3B069249A2C7100BDF6CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FFE3B06B249A2C7100BDF6CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FFE3B06E249A2C7100BDF6CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FFE3B070249A2C7C00BDF6CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFE3B073249A2C7C00BDF6CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFE3B075249A2C7C00BDF6CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FFE3B07C249A37AF00BDF6CF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		FFE3B07D249A37AF00BDF6CF /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		FFE3B081249B2B2800BDF6CF /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
+		FFE3B082249B2B2800BDF6CF /* ToDoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoCell.xib; sourceTree = "<group>"; };
+		FFE3B086249B338400BDF6CF /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +78,47 @@
 			children = (
 				FFE3B067249A2C7100BDF6CF /* AppDelegate.swift */,
 				FFE3B069249A2C7100BDF6CF /* SceneDelegate.swift */,
-				FFE3B06B249A2C7100BDF6CF /* ViewController.swift */,
-				FFE3B06D249A2C7100BDF6CF /* Main.storyboard */,
+				FFE3B085249B336D00BDF6CF /* Models */,
+				FFE3B080249B27F800BDF6CF /* Views */,
+				FFE3B07B249A2E0600BDF6CF /* Controllers */,
 				FFE3B070249A2C7C00BDF6CF /* Assets.xcassets */,
 				FFE3B072249A2C7C00BDF6CF /* LaunchScreen.storyboard */,
 				FFE3B075249A2C7C00BDF6CF /* Info.plist */,
 			);
 			path = ToDo;
+			sourceTree = "<group>";
+		};
+		FFE3B07B249A2E0600BDF6CF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FFE3B06B249A2C7100BDF6CF /* ViewController.swift */,
+				FFE3B07C249A37AF00BDF6CF /* MainViewController.swift */,
+				FFE3B07D249A37AF00BDF6CF /* MainViewController.xib */,
+				FF2B9316249B7A4A00BE56E7 /* CreateToDoViewController.swift */,
+				FF2B9317249B7A4A00BE56E7 /* CreateToDoViewController.xib */,
+				FF2B933E24A0C22300BE56E7 /* TimePickerViewController.swift */,
+				FF2B933F24A0C22300BE56E7 /* TimePickerViewController.xib */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FFE3B080249B27F800BDF6CF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FFE3B081249B2B2800BDF6CF /* ToDoCell.swift */,
+				FFE3B082249B2B2800BDF6CF /* ToDoCell.xib */,
+				FF2B934824A201AB00BE56E7 /* TimeCell.swift */,
+				FF2B934924A201AB00BE56E7 /* TimeCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FFE3B085249B336D00BDF6CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FFE3B086249B338400BDF6CF /* ToDoModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +179,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF2B934B24A201AB00BE56E7 /* TimeCell.xib in Resources */,
 				FFE3B074249A2C7C00BDF6CF /* LaunchScreen.storyboard in Resources */,
+				FF2B934124A0C22300BE56E7 /* TimePickerViewController.xib in Resources */,
+				FFE3B07F249A37AF00BDF6CF /* MainViewController.xib in Resources */,
 				FFE3B071249A2C7C00BDF6CF /* Assets.xcassets in Resources */,
-				FFE3B06F249A2C7100BDF6CF /* Main.storyboard in Resources */,
+				FF2B9319249B7A4A00BE56E7 /* CreateToDoViewController.xib in Resources */,
+				FFE3B084249B2B2800BDF6CF /* ToDoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,22 +197,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				FFE3B06C249A2C7100BDF6CF /* ViewController.swift in Sources */,
+				FF2B9318249B7A4A00BE56E7 /* CreateToDoViewController.swift in Sources */,
 				FFE3B068249A2C7100BDF6CF /* AppDelegate.swift in Sources */,
 				FFE3B06A249A2C7100BDF6CF /* SceneDelegate.swift in Sources */,
+				FFE3B07E249A37AF00BDF6CF /* MainViewController.swift in Sources */,
+				FF2B934024A0C22300BE56E7 /* TimePickerViewController.swift in Sources */,
+				FFE3B083249B2B2800BDF6CF /* ToDoCell.swift in Sources */,
+				FF2B934A24A201AB00BE56E7 /* TimeCell.swift in Sources */,
+				FFE3B087249B338400BDF6CF /* ToDoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FFE3B06D249A2C7100BDF6CF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FFE3B06E249A2C7100BDF6CF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FFE3B072249A2C7C00BDF6CF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -287,6 +343,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FMMGHKGHHC;
 				INFOPLIST_FILE = ToDo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +362,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FMMGHKGHHC;
 				INFOPLIST_FILE = ToDo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

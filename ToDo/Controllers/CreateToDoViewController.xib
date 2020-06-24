@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateToDoViewController" customModule="ToDo" customModuleProvider="target">
+            <connections>
+                <outlet property="addButton" destination="gam-ED-tVL" id="nbw-fD-Le7"/>
+                <outlet property="addEndTimeTextField" destination="f2o-Db-qXA" id="Y1t-ER-uk7"/>
+                <outlet property="addStartTimeTextField" destination="Tqo-wW-STT" id="cHM-74-mjO"/>
+                <outlet property="taskNameTextField" destination="Mbt-pu-tr5" id="0XZ-4n-KJX"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a Task" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKL-rm-DKT" userLabel="Create a Task">
+                    <rect key="frame" x="20" y="60" width="132" height="86"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="132" id="AfE-iP-cb6"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="36"/>
+                    <color key="textColor" red="0.24985460229799444" green="0.58536317372564972" blue="0.68848744697616582" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of the task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mbt-pu-tr5" userLabel="Task Name TextField">
+                    <rect key="frame" x="20" y="174" width="374" height="45"/>
+                    <color key="backgroundColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="vRs-LP-0sx"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tqo-wW-STT" userLabel="Add Start Time TextField">
+                    <rect key="frame" x="20" y="251" width="374" height="45"/>
+                    <color key="backgroundColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="GyC-fv-atC"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f2o-Db-qXA" userLabel="Add End Time TextField">
+                    <rect key="frame" x="20" y="328" width="374" height="45"/>
+                    <color key="backgroundColor" red="0.32156862749999998" green="0.32156862749999998" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Wj8-Iu-OdW"/>
+                        <constraint firstAttribute="height" constant="45" id="dgW-mO-sIO"/>
+                    </constraints>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gam-ED-tVL" userLabel="Create Button">
+                    <rect key="frame" x="20" y="795" width="374" height="45"/>
+                    <color key="backgroundColor" red="0.92549019610000005" green="0.38431372549999998" blue="0.37254901959999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="lIs-1V-UTo"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                    <state key="normal" title="Add New Task">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="addButtonPressed:" destination="-1" eventType="touchUpInside" id="2cw-Hu-okU"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.25490196079999999" green="0.25490196079999999" blue="0.25490196079999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Mbt-pu-tr5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="2Vf-K9-kKw"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="f2o-Db-qXA" secondAttribute="trailing" constant="20" id="6An-0f-Xg8"/>
+                <constraint firstItem="f2o-Db-qXA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="6Y8-QP-rCz"/>
+                <constraint firstItem="Mbt-pu-tr5" firstAttribute="top" secondItem="WKL-rm-DKT" secondAttribute="bottom" constant="28" id="DPa-kh-Sa0"/>
+                <constraint firstAttribute="trailing" secondItem="Mbt-pu-tr5" secondAttribute="trailing" constant="20" id="FOF-DY-Sa9"/>
+                <constraint firstItem="WKL-rm-DKT" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="16" id="P9I-RF-eA3"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gam-ED-tVL" secondAttribute="trailing" constant="20" id="QqK-dl-kPB"/>
+                <constraint firstItem="Tqo-wW-STT" firstAttribute="top" secondItem="Mbt-pu-tr5" secondAttribute="bottom" constant="32" id="YDf-E1-99A"/>
+                <constraint firstItem="f2o-Db-qXA" firstAttribute="top" secondItem="Tqo-wW-STT" secondAttribute="bottom" constant="32" id="ZgT-7X-6X4"/>
+                <constraint firstItem="gam-ED-tVL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="azJ-D3-z4j"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Tqo-wW-STT" secondAttribute="trailing" constant="20" id="eHI-8I-r4d"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gam-ED-tVL" secondAttribute="bottom" constant="22" id="fKX-a5-xDI"/>
+                <constraint firstItem="Tqo-wW-STT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="hiV-on-nnn"/>
+                <constraint firstItem="WKL-rm-DKT" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="sbj-mc-Abq"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
+        </view>
+    </objects>
+</document>
