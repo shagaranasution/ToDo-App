@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwipeCellKit
 
-class ToDoCell: UITableViewCell {
+class ToDoCell: SwipeTableViewCell {
 
     @IBOutlet weak var toDoTitle: UILabel!
     @IBOutlet weak var activityDate: UILabel!
@@ -25,5 +26,11 @@ class ToDoCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+//    override func layoutSubviews() {
+//        super.layoutSubviews()
+//
+//        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10))
+//    }
     
 }

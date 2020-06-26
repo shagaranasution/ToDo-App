@@ -7,20 +7,24 @@
 //
 
 import UIKit
+import RealmSwift
+import SwipeCellKit
 
 class MainViewController: UIViewController {
-
+    
     @IBOutlet weak var toDoListView: UITableView!
     @IBOutlet weak var tabBar: UITabBar!
     @IBOutlet weak var addToDo: UITabBarItem!
     
-    var toDoItems = [ToDoModel]()
+    let realm = try! Realm()
+    
+    var toDoItems: Results<Item>?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.2549019608, blue: 0.2549019608, alpha: 1)
-        toDoListView.backgroundColor = #colorLiteral(red: 0.2549019608, green: 0.2549019608, blue: 0.2549019608, alpha: 1)
+        
+        view.backgroundColor = UIColor(named: "containerColor")
+        toDoListView.backgroundColor = UIColor(named: "containerColor")
         toDoListView.separatorStyle = .none
         
         tabBar.shadowImage = UIImage()
@@ -29,52 +33,78 @@ class MainViewController: UIViewController {
         navigationItem.title = "ToDo"
         
         let configAddToDoIcon = UIImage.SymbolConfiguration(pointSize: 45, weight: .regular, scale: .default)
-       
+        
         let addToDoIcon =  UIImage(systemName: "plus.circle.fill", withConfiguration: configAddToDoIcon)
         
         addToDo.image = addToDoIcon?.withTintColor(#colorLiteral(red: 0.9254901961, green: 0.3843137255, blue: 0.3725490196, alpha: 1), renderingMode: .alwaysOriginal)
-    
+        
         toDoListView.dataSource = self
         tabBar.delegate = self
         
         toDoListView.register(UINib(nibName: "ToDoCell", bundle: nil), forCellReuseIdentifier: "ToDoCell")
+        toDoListView.register(UINib(nibName: "EmptyToDoCell", bundle: nil), forCellReuseIdentifier: "reuseEmptyToDoCell")
         
-        var toDoItems1 = ToDoModel()
-        toDoItems1.title = "Red News"
-        toDoItems1.activityDate = "Dec 25, 08:00 - 09:00"
-        
-        var toDoItems2 = ToDoModel()
-        toDoItems2.title = "Meeting"
-        toDoItems2.activityDate = "Dec 25, 13:00 - 16:00"
-        
-        var toDoItems3 = ToDoModel()
-        toDoItems3.title = "Work Out"
-        toDoItems3.activityDate = "Dec 25, 19:00 - 21:00"
-        
-        toDoItems.append(toDoItems1)
-        toDoItems.append(toDoItems2)
-        toDoItems.append(toDoItems3)
+        loadItems()
     }
-
+    
+    func loadItems() {
+        toDoItems = realm.objects(Item.self)
+        toDoListView.reloadData()
+    }
 }
 
 
 
 //MARK: - TableView DataSource Methods
 
-extension MainViewController: UITableViewDataSource {
+extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return toDoItems.count
+
+        return toDoItems?.count ?? 1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath) as! ToDoCell
-        cell.toDoTitle.text = toDoItems[indexPath.row].title
-        cell.activityDate.text = toDoItems[indexPath.row].activityDate
+        let index = indexPath.row
         
-        return cell
+        if let item = toDoItems?[index] {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ToDoCell", for: indexPath) as! ToDoCell
+            cell.delegate = self
+
+            cell.toDoTitle.text = item.title
+
+            let dateFormatter = DateFormatter()
+
+            let startDateTime = item.startDateTime
+            let finishDateTime = item.finishDateTime
+
+            dateFormatter.dateFormat = "E, d MMM yyyy"
+            let stringMonth = dateFormatter.string(from: startDateTime)
+
+            dateFormatter.timeStyle = DateFormatter.Style.short
+            let stringStartTime = dateFormatter.string(from: startDateTime)
+            let stringFinishTime = dateFormatter.string(from: finishDateTime)
+
+            let stringTaskTime = "\(stringMonth), \(stringStartTime) - \(stringFinishTime)"
+            cell.activityDate.text = stringTaskTime
+
+            if !item.done {
+                cell.toDoTitle.textColor = .label
+                cell.activityDate.textColor = .label
+            } else {
+                cell.toDoTitle.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+                cell.activityDate.textColor = #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1)
+            }
+
+            cell.toDoTitle.strikeThrough(item.done)
+            cell.activityDate.strikeThrough(item.done)
+
+            return cell
+        } else  {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "reuseEmptyToDoCell", for: indexPath) as! EmptyToDoCell
+
+            return cell
+        }
     }
-    
     
 }
 
@@ -82,10 +112,121 @@ extension MainViewController: UITableViewDataSource {
 
 extension MainViewController: UITabBarDelegate {
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        let createToDoView = CreateToDoViewController()
+        let createToDoVC = CreateToDoViewController()
         
-        present(createToDoView, animated: true, completion: nil)
+        createToDoVC.delegate = self
         
-        print("pressed")
+        present(createToDoVC, animated: true, completion: nil)
+    }
+}
+
+//MARK: - CreateToDoVC Delegate Methods
+
+extension MainViewController: CreateToDoViewControllerDelegate {
+    func didCreateToDo(_ createToDoViewController: CreateToDoViewController) {
+        createToDoViewController.dismiss(animated: true, completion: nil)
+        
+        toDoListView.reloadData()
+    }
+}
+
+//MARK: - SwipeTableViewCell Delegate Methods
+
+extension MainViewController: SwipeTableViewCellDelegate {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> [SwipeAction]? {
+        
+        if let item = toDoItems?[indexPath.row] {
+            if orientation == .right {
+                let deleteAction = SwipeAction(style: .destructive, title: nil) { action, indexPath in
+                    print("deleted")
+                }
+    
+                // customize the action appearance
+                deleteAction.image = UIImage(systemName: "trash.fill")
+    
+                return [deleteAction]
+            }
+            
+            if orientation == .left {
+                let makeDoneAction = SwipeAction(style: .destructive, title: nil) { (action, indexPath) in
+                    print("make done", action)
+                    do {
+                        try self.realm.write{
+                            item.done = true
+                        }
+                    } catch {
+                        print("Error updating task status, \(error)")
+                    }
+                    
+                    self.toDoListView.reloadData()
+                }
+                
+                let makeUndoneAction = SwipeAction(style: .destructive, title: "Undo") { (action, indexPath) in
+                    print("make undone", action)
+                    do {
+                        try self.realm.write{
+                            item.done = false
+                        }
+                        
+                    } catch {
+                        print("Error updating task status, \(error)")
+                    }
+                    
+                    self.toDoListView.reloadData()
+                }
+                
+                makeDoneAction.image = UIImage(systemName: "checkmark")
+                makeDoneAction.backgroundColor = #colorLiteral(red: 0.3529411765, green: 0.6196078431, blue: 0.4352941176, alpha: 1)
+                makeUndoneAction.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.3843137255, blue: 0.3725490196, alpha: 1)
+                
+                if !item.done {
+                    return [makeDoneAction]
+                } else {
+                    return [makeUndoneAction]
+                }
+            }
+        }
+        
+        return nil
+    }
+    
+    
+    func tableView(_ tableView: UITableView, editActionsOptionsForRowAt indexPath: IndexPath, for orientation: SwipeActionsOrientation) -> SwipeOptions {
+        var options = SwipeOptions()
+
+        options.expansionStyle = .none
+        options.transitionStyle = .border
+
+        return options
+    }
+    
+}
+
+extension String {
+    func strikeThrough() -> NSAttributedString {
+        let attributeString =  NSMutableAttributedString(string: self)
+        attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0,attributeString.length))
+        
+        return attributeString
+    }
+}
+
+extension UILabel {
+    func strikeThrough(_ isStrikeThrough:Bool) {
+        if isStrikeThrough {
+            if let lblText = self.text {
+                let attributeString =  NSMutableAttributedString(string: lblText)
+                attributeString.addAttribute(NSAttributedString.Key.strikethroughStyle, value: NSUnderlineStyle.single.rawValue, range: NSMakeRange(0,attributeString.length))
+                self.attributedText = attributeString
+            }
+        } else {
+            if let attributedStringText = self.attributedText {
+                let txt = attributedStringText.string
+                
+                self.attributedText = nil
+                self.text = txt
+                return
+            }
+        }
     }
 }

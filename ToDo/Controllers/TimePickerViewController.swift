@@ -49,6 +49,7 @@ class TimePickerViewController: UIViewController {
         let stringDate = dateFormatter.string(from: currentDateTime)
         
         timePickedLabel.text = stringDate
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,7 +70,7 @@ class TimePickerViewController: UIViewController {
         self.delegate?.timePickerViewControllerDidSet(self, timeContextType: timeContextType, timeSet: timePicker.date)
     }
     
-    @IBAction func dismissButtonPressed(_ sender: UIButton) {
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
         self.delegate?.timePickerViewControllerDidCancel(self)
     }
     
@@ -80,7 +81,7 @@ class TimePickerViewController: UIViewController {
         // customizing the dialog box
         dialogBoxView.layer.cornerRadius = 10.0
         dialogBoxView.layer.borderWidth = 1.0
-        dialogBoxView.layer.borderColor = #colorLiteral(red: 0.2549019608, green: 0.2549019608, blue: 0.2549019608, alpha: 1)
+        dialogBoxView.layer.borderColor = UIColor(named: "containerColor")?.cgColor
         
         // customizing set time button
         setTimeButton.layer.cornerRadius = 10.0
