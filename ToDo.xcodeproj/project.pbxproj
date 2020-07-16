@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F2A9D61D36247B1C63A0CDA2 /* Pods_ToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72E4CF646ABF916755628127 /* Pods_ToDo.framework */; };
+		1AFB17BBFDA9961AD43057C7 /* Pods_ToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E48AE2D45C0E305B02A33172 /* Pods_ToDo.framework */; };
 		FF2B9318249B7A4A00BE56E7 /* CreateToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B9316249B7A4A00BE56E7 /* CreateToDoViewController.swift */; };
 		FF2B9319249B7A4A00BE56E7 /* CreateToDoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2B9317249B7A4A00BE56E7 /* CreateToDoViewController.xib */; };
 		FF2B934024A0C22300BE56E7 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B933E24A0C22300BE56E7 /* TimePickerViewController.swift */; };
@@ -15,25 +15,32 @@
 		FF2B934F24A33C4000BE56E7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B934E24A33C4000BE56E7 /* Item.swift */; };
 		FF2B935424A3649D00BE56E7 /* EmptyToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B935224A3649D00BE56E7 /* EmptyToDoCell.swift */; };
 		FF2B935524A3649D00BE56E7 /* EmptyToDoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2B935324A3649D00BE56E7 /* EmptyToDoCell.xib */; };
-		FF7B282324A602DD00174796 /* MainViewController+SwipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B282224A602DD00174796 /* MainViewController+SwipeTableViewCell.swift */; };
+		FF3EF8C724B59BF7008A0F8B /* FullDateCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3EF8C524B59BF7008A0F8B /* FullDateCollectionViewCell.swift */; };
+		FF3EF8C824B59BF7008A0F8B /* FullDateCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF3EF8C624B59BF7008A0F8B /* FullDateCollectionViewCell.xib */; };
+		FF3EF8CA24B5A1A6008A0F8B /* ToDoViewController+CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3EF8C924B5A1A6008A0F8B /* ToDoViewController+CollectionView.swift */; };
+		FF3EF8CE24B86E8D008A0F8B /* ToDoViewController+UITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3EF8CD24B86E8D008A0F8B /* ToDoViewController+UITabBar.swift */; };
+		FF5A1B3624BC545B00FB9094 /* NavigationTitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5A1B3524BC545B00FB9094 /* NavigationTitleModel.swift */; };
+		FF7B282324A602DD00174796 /* ToDoViewController+SwipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B282224A602DD00174796 /* ToDoViewController+SwipeTableViewCell.swift */; };
+		FF7B282524A6047E00174796 /* ToDoViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B282424A6047E00174796 /* ToDoViewController+UITableView.swift */; };
+		FF7B282724A606E900174796 /* CreateToDoViewController+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B282624A606E900174796 /* CreateToDoViewController+UITextField.swift */; };
+		FF7B282924A607AD00174796 /* CreateToDoViewController+TimePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B282824A607AD00174796 /* CreateToDoViewController+TimePickerView.swift */; };
 		FFE3B068249A2C7100BDF6CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3B067249A2C7100BDF6CF /* AppDelegate.swift */; };
 		FFE3B06A249A2C7100BDF6CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3B069249A2C7100BDF6CF /* SceneDelegate.swift */; };
 		FFE3B071249A2C7C00BDF6CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B070249A2C7C00BDF6CF /* Assets.xcassets */; };
 		FFE3B074249A2C7C00BDF6CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B072249A2C7C00BDF6CF /* LaunchScreen.storyboard */; };
-		FFE3B07E249A37AF00BDF6CF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3B07C249A37AF00BDF6CF /* MainViewController.swift */; };
-		FFE3B07F249A37AF00BDF6CF /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B07D249A37AF00BDF6CF /* MainViewController.xib */; };
+		FFE3B07E249A37AF00BDF6CF /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3B07C249A37AF00BDF6CF /* ToDoViewController.swift */; };
+		FFE3B07F249A37AF00BDF6CF /* ToDoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B07D249A37AF00BDF6CF /* ToDoViewController.xib */; };
 		FFE3B083249B2B2800BDF6CF /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3B081249B2B2800BDF6CF /* ToDoCell.swift */; };
 		FFE3B084249B2B2800BDF6CF /* ToDoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B082249B2B2800BDF6CF /* ToDoCell.xib */; };
-		FFE3B087249B338400BDF6CF /* ToDoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3B086249B338400BDF6CF /* ToDoModel.swift */; };
 		FFFD7E6024A4B700008D4DAA /* NanumGothic-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFFD7E5D24A4B6FF008D4DAA /* NanumGothic-Regular.ttf */; };
 		FFFD7E6124A4B700008D4DAA /* NanumGothic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFFD7E5E24A4B6FF008D4DAA /* NanumGothic-Bold.ttf */; };
 		FFFD7E6224A4B700008D4DAA /* NanumGothic-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FFFD7E5F24A4B700008D4DAA /* NanumGothic-ExtraBold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2717E3A768E9096E19233A25 /* Pods-ToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.release.xcconfig"; path = "Target Support Files/Pods-ToDo/Pods-ToDo.release.xcconfig"; sourceTree = "<group>"; };
-		4C8286E669DA0659F04F2CC2 /* Pods-ToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.debug.xcconfig"; path = "Target Support Files/Pods-ToDo/Pods-ToDo.debug.xcconfig"; sourceTree = "<group>"; };
-		72E4CF646ABF916755628127 /* Pods_ToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		393790593FEA4A3DA68C29C8 /* Pods-ToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.debug.xcconfig"; path = "Target Support Files/Pods-ToDo/Pods-ToDo.debug.xcconfig"; sourceTree = "<group>"; };
+		A3BA1EC0FCED4864F185435A /* Pods-ToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.release.xcconfig"; path = "Target Support Files/Pods-ToDo/Pods-ToDo.release.xcconfig"; sourceTree = "<group>"; };
+		E48AE2D45C0E305B02A33172 /* Pods_ToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF2B9316249B7A4A00BE56E7 /* CreateToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateToDoViewController.swift; sourceTree = "<group>"; };
 		FF2B9317249B7A4A00BE56E7 /* CreateToDoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateToDoViewController.xib; sourceTree = "<group>"; };
 		FF2B933E24A0C22300BE56E7 /* TimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
@@ -41,18 +48,25 @@
 		FF2B934E24A33C4000BE56E7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		FF2B935224A3649D00BE56E7 /* EmptyToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyToDoCell.swift; sourceTree = "<group>"; };
 		FF2B935324A3649D00BE56E7 /* EmptyToDoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyToDoCell.xib; sourceTree = "<group>"; };
-		FF7B282224A602DD00174796 /* MainViewController+SwipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainViewController+SwipeTableViewCell.swift"; sourceTree = "<group>"; };
+		FF3EF8C524B59BF7008A0F8B /* FullDateCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FullDateCollectionViewCell.swift; sourceTree = "<group>"; };
+		FF3EF8C624B59BF7008A0F8B /* FullDateCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FullDateCollectionViewCell.xib; sourceTree = "<group>"; };
+		FF3EF8C924B5A1A6008A0F8B /* ToDoViewController+CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoViewController+CollectionView.swift"; sourceTree = "<group>"; };
+		FF3EF8CD24B86E8D008A0F8B /* ToDoViewController+UITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoViewController+UITabBar.swift"; sourceTree = "<group>"; };
+		FF5A1B3524BC545B00FB9094 /* NavigationTitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationTitleModel.swift; sourceTree = "<group>"; };
+		FF7B282224A602DD00174796 /* ToDoViewController+SwipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoViewController+SwipeTableViewCell.swift"; sourceTree = "<group>"; };
+		FF7B282424A6047E00174796 /* ToDoViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoViewController+UITableView.swift"; sourceTree = "<group>"; };
+		FF7B282624A606E900174796 /* CreateToDoViewController+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateToDoViewController+UITextField.swift"; sourceTree = "<group>"; };
+		FF7B282824A607AD00174796 /* CreateToDoViewController+TimePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateToDoViewController+TimePickerView.swift"; sourceTree = "<group>"; };
 		FFE3B064249A2C7100BDF6CF /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE3B067249A2C7100BDF6CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE3B069249A2C7100BDF6CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FFE3B070249A2C7C00BDF6CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FFE3B073249A2C7C00BDF6CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FFE3B075249A2C7C00BDF6CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FFE3B07C249A37AF00BDF6CF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		FFE3B07D249A37AF00BDF6CF /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		FFE3B07C249A37AF00BDF6CF /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		FFE3B07D249A37AF00BDF6CF /* ToDoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoViewController.xib; sourceTree = "<group>"; };
 		FFE3B081249B2B2800BDF6CF /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 		FFE3B082249B2B2800BDF6CF /* ToDoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToDoCell.xib; sourceTree = "<group>"; };
-		FFE3B086249B338400BDF6CF /* ToDoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoModel.swift; sourceTree = "<group>"; };
 		FFFD7E5D24A4B6FF008D4DAA /* NanumGothic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumGothic-Regular.ttf"; sourceTree = "<group>"; };
 		FFFD7E5E24A4B6FF008D4DAA /* NanumGothic-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumGothic-Bold.ttf"; sourceTree = "<group>"; };
 		FFFD7E5F24A4B700008D4DAA /* NanumGothic-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NanumGothic-ExtraBold.ttf"; sourceTree = "<group>"; };
@@ -63,17 +77,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2A9D61D36247B1C63A0CDA2 /* Pods_ToDo.framework in Frameworks */,
+				1AFB17BBFDA9961AD43057C7 /* Pods_ToDo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0DA87DF232BB38A16910056D /* Frameworks */ = {
+		1A8B52E4DB92CA916BD42FE0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				72E4CF646ABF916755628127 /* Pods_ToDo.framework */,
+				E48AE2D45C0E305B02A33172 /* Pods_ToDo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -81,8 +95,8 @@
 		ED8BACFC76C2BB67D4C5CABD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				4C8286E669DA0659F04F2CC2 /* Pods-ToDo.debug.xcconfig */,
-				2717E3A768E9096E19233A25 /* Pods-ToDo.release.xcconfig */,
+				393790593FEA4A3DA68C29C8 /* Pods-ToDo.debug.xcconfig */,
+				A3BA1EC0FCED4864F185435A /* Pods-ToDo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -93,7 +107,7 @@
 				FFE3B066249A2C7100BDF6CF /* ToDo */,
 				FFE3B065249A2C7100BDF6CF /* Products */,
 				ED8BACFC76C2BB67D4C5CABD /* Pods */,
-				0DA87DF232BB38A16910056D /* Frameworks */,
+				1A8B52E4DB92CA916BD42FE0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,13 +138,18 @@
 		FFE3B07B249A2E0600BDF6CF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FFE3B07C249A37AF00BDF6CF /* MainViewController.swift */,
-				FFE3B07D249A37AF00BDF6CF /* MainViewController.xib */,
+				FFE3B07C249A37AF00BDF6CF /* ToDoViewController.swift */,
+				FFE3B07D249A37AF00BDF6CF /* ToDoViewController.xib */,
+				FF3EF8C924B5A1A6008A0F8B /* ToDoViewController+CollectionView.swift */,
+				FF7B282424A6047E00174796 /* ToDoViewController+UITableView.swift */,
+				FF7B282224A602DD00174796 /* ToDoViewController+SwipeTableViewCell.swift */,
+				FF3EF8CD24B86E8D008A0F8B /* ToDoViewController+UITabBar.swift */,
 				FF2B9316249B7A4A00BE56E7 /* CreateToDoViewController.swift */,
 				FF2B9317249B7A4A00BE56E7 /* CreateToDoViewController.xib */,
+				FF7B282624A606E900174796 /* CreateToDoViewController+UITextField.swift */,
+				FF7B282824A607AD00174796 /* CreateToDoViewController+TimePickerView.swift */,
 				FF2B933E24A0C22300BE56E7 /* TimePickerViewController.swift */,
 				FF2B933F24A0C22300BE56E7 /* TimePickerViewController.xib */,
-				FF7B282224A602DD00174796 /* MainViewController+SwipeTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -142,6 +161,8 @@
 				FFE3B082249B2B2800BDF6CF /* ToDoCell.xib */,
 				FF2B935224A3649D00BE56E7 /* EmptyToDoCell.swift */,
 				FF2B935324A3649D00BE56E7 /* EmptyToDoCell.xib */,
+				FF3EF8C524B59BF7008A0F8B /* FullDateCollectionViewCell.swift */,
+				FF3EF8C624B59BF7008A0F8B /* FullDateCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -149,8 +170,8 @@
 		FFE3B085249B336D00BDF6CF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				FFE3B086249B338400BDF6CF /* ToDoModel.swift */,
 				FF2B934E24A33C4000BE56E7 /* Item.swift */,
+				FF5A1B3524BC545B00FB9094 /* NavigationTitleModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -172,11 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FFE3B078249A2C7C00BDF6CF /* Build configuration list for PBXNativeTarget "ToDo" */;
 			buildPhases = (
-				1E420E56E2A0A0D524FEBFC5 /* [CP] Check Pods Manifest.lock */,
+				5F06E65FE78E4C26BC3F9883 /* [CP] Check Pods Manifest.lock */,
 				FFE3B060249A2C7100BDF6CF /* Sources */,
 				FFE3B061249A2C7100BDF6CF /* Frameworks */,
 				FFE3B062249A2C7100BDF6CF /* Resources */,
-				C251B793543B0C72A8797580 /* [CP] Embed Pods Frameworks */,
+				02D82BDAA55F79842CD56EEB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -225,13 +246,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF3EF8C824B59BF7008A0F8B /* FullDateCollectionViewCell.xib in Resources */,
 				FFFD7E6224A4B700008D4DAA /* NanumGothic-ExtraBold.ttf in Resources */,
 				FFE3B074249A2C7C00BDF6CF /* LaunchScreen.storyboard in Resources */,
 				FF2B934124A0C22300BE56E7 /* TimePickerViewController.xib in Resources */,
 				FF2B935524A3649D00BE56E7 /* EmptyToDoCell.xib in Resources */,
 				FFFD7E6024A4B700008D4DAA /* NanumGothic-Regular.ttf in Resources */,
 				FFFD7E6124A4B700008D4DAA /* NanumGothic-Bold.ttf in Resources */,
-				FFE3B07F249A37AF00BDF6CF /* MainViewController.xib in Resources */,
+				FFE3B07F249A37AF00BDF6CF /* ToDoViewController.xib in Resources */,
 				FFE3B071249A2C7C00BDF6CF /* Assets.xcassets in Resources */,
 				FF2B9319249B7A4A00BE56E7 /* CreateToDoViewController.xib in Resources */,
 				FFE3B084249B2B2800BDF6CF /* ToDoCell.xib in Resources */,
@@ -241,7 +263,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1E420E56E2A0A0D524FEBFC5 /* [CP] Check Pods Manifest.lock */ = {
+		02D82BDAA55F79842CD56EEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ToDo/Pods-ToDo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ToDo/Pods-ToDo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ToDo/Pods-ToDo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5F06E65FE78E4C26BC3F9883 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -263,23 +302,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		C251B793543B0C72A8797580 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ToDo/Pods-ToDo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ToDo/Pods-ToDo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ToDo/Pods-ToDo-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -287,15 +309,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF7B282324A602DD00174796 /* MainViewController+SwipeTableViewCell.swift in Sources */,
+				FF5A1B3624BC545B00FB9094 /* NavigationTitleModel.swift in Sources */,
+				FF7B282324A602DD00174796 /* ToDoViewController+SwipeTableViewCell.swift in Sources */,
 				FF2B934F24A33C4000BE56E7 /* Item.swift in Sources */,
+				FF3EF8C724B59BF7008A0F8B /* FullDateCollectionViewCell.swift in Sources */,
 				FF2B9318249B7A4A00BE56E7 /* CreateToDoViewController.swift in Sources */,
 				FFE3B068249A2C7100BDF6CF /* AppDelegate.swift in Sources */,
+				FF7B282724A606E900174796 /* CreateToDoViewController+UITextField.swift in Sources */,
+				FF7B282924A607AD00174796 /* CreateToDoViewController+TimePickerView.swift in Sources */,
+				FF3EF8CE24B86E8D008A0F8B /* ToDoViewController+UITabBar.swift in Sources */,
 				FFE3B06A249A2C7100BDF6CF /* SceneDelegate.swift in Sources */,
-				FFE3B07E249A37AF00BDF6CF /* MainViewController.swift in Sources */,
+				FFE3B07E249A37AF00BDF6CF /* ToDoViewController.swift in Sources */,
 				FF2B934024A0C22300BE56E7 /* TimePickerViewController.swift in Sources */,
+				FF3EF8CA24B5A1A6008A0F8B /* ToDoViewController+CollectionView.swift in Sources */,
 				FFE3B083249B2B2800BDF6CF /* ToDoCell.swift in Sources */,
-				FFE3B087249B338400BDF6CF /* ToDoModel.swift in Sources */,
+				FF7B282524A6047E00174796 /* ToDoViewController+UITableView.swift in Sources */,
 				FF2B935424A3649D00BE56E7 /* EmptyToDoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,7 +458,7 @@
 		};
 		FFE3B079249A2C7C00BDF6CF /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C8286E669DA0659F04F2CC2 /* Pods-ToDo.debug.xcconfig */;
+			baseConfigurationReference = 393790593FEA4A3DA68C29C8 /* Pods-ToDo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -451,7 +479,7 @@
 		};
 		FFE3B07A249A2C7C00BDF6CF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2717E3A768E9096E19233A25 /* Pods-ToDo.release.xcconfig */;
+			baseConfigurationReference = A3BA1EC0FCED4864F185435A /* Pods-ToDo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

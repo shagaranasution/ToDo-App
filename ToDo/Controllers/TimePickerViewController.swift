@@ -36,20 +36,6 @@ class TimePickerViewController: UIViewController {
         super.viewDidLoad()
         
         configureView()
-        
-        if timeContextType == .startTime {
-            selectTimeLabel.text = "Select start time"
-        } else {
-            selectTimeLabel.text = "Select finish time"
-        }
-        
-        let currentDateTime = Date()
-        dateFormatter.timeStyle = DateFormatter.Style.short
-        
-        let stringDate = dateFormatter.string(from: currentDateTime)
-        
-        timePickedLabel.text = stringDate
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,7 +45,6 @@ class TimePickerViewController: UIViewController {
     
     @IBAction func timePickerChanged(_ sender: UIDatePicker) {
         dateFormatter.timeStyle = DateFormatter.Style.short
-//        dateFormatter.locale = Locale(identifier: "en_GB")
         
         let stringDate = dateFormatter.string(from: timePicker.date)
         
@@ -85,7 +70,20 @@ class TimePickerViewController: UIViewController {
         
         // customizing set time button
         setTimeButton.layer.cornerRadius = 10.0
-
+        
+        // customizing time picker
+        if timeContextType == .startTime {
+            selectTimeLabel.text = "Select start time"
+        } else {
+            selectTimeLabel.text = "Select finish time"
+        }
+        
+        let currentDateTime = Date()
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let stringDate = dateFormatter.string(from: currentDateTime)
+        
+        timePickedLabel.text = stringDate
     }
     
 }
