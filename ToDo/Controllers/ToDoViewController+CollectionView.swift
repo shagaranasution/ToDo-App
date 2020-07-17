@@ -8,12 +8,6 @@
 
 import UIKit
 
-struct CustomDate {
-    let dayString: String
-    let numberString: String
-    let monthString: String
-}
-
 extension ToDoViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func setupCollectionViewLayout() {
         guard let flowLayout = dayCollectionView.collectionViewLayout as? UICollectionViewFlowLayout else {

@@ -28,7 +28,6 @@ extension ToDoViewController: SwipeTableViewCellDelegate {
                     self.toDoListView.reloadData()
                 }
     
-                // customize the action appearance
                 deleteAction.image = UIImage(systemName: "trash.fill")
     
                 return [deleteAction]
@@ -36,7 +35,6 @@ extension ToDoViewController: SwipeTableViewCellDelegate {
             
             if orientation == .left {
                 let makeDoneAction = SwipeAction(style: .destructive, title: nil) { (action, indexPath) in
-                    print("make done", action)
                     do {
                         try self.realm.write{
                             item.done = true
@@ -49,7 +47,6 @@ extension ToDoViewController: SwipeTableViewCellDelegate {
                 }
                 
                 let makeUndoneAction = SwipeAction(style: .destructive, title: "Undo") { (action, indexPath) in
-                    print("make undone", action)
                     do {
                         try self.realm.write{
                             item.done = false

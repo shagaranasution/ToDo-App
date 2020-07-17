@@ -18,13 +18,10 @@ class ToDoViewController: UIViewController {
     
     var rightBarButtonItem: UIBarButtonItem?
     
-    public let realm = try! Realm()
-    
-    public var calender: Calendar = .current
+    let realm = try! Realm()
     let dateFormatter = DateFormatter()
+    var calender: Calendar = .current
     
-//    var tomorrowDate = Date().addingTimeInterval(60 * 60 * 24 * 1)
-//    var yesterdayDate = Date().addingTimeInterval(-60 * 60 * 24 * 1)
     var selectedDate: Date?
     var isRightBarButtonItemShow = false
     
@@ -87,7 +84,6 @@ class ToDoViewController: UIViewController {
         addToDo.image = addToDoIcon?.withTintColor(#colorLiteral(red: 0.9254901961, green: 0.3843137255, blue: 0.3725490196, alpha: 1), renderingMode: .alwaysOriginal)
         
         fillDates()
-        updateCollectionView()
     }
     
     func showRightBarButtonItem() {
@@ -108,24 +104,24 @@ class ToDoViewController: UIViewController {
     func setNavigationItemTitle(with date: Date) {
         dateFormatter.dateFormat = "d MMM"
         let currentDate = Date()
+        let yesterdayDate = currentDate.addingTimeInterval(-60 * 60 * 24 * 1)
+        let tomorrowDate = currentDate.addingTimeInterval(60 * 60 * 24 * 1)
 
-//        let strCurrentDate = dateFormatter.string(from: currentDate)
-//        let strTomorrowDate = dateFormatter.string(from: tomorrowDate)
-//        let strYesterdayDate = dateFormatter.string(from: yesterdayDate)
-//        let strDate = dateFormatter.string(from: date)
-//
-//        switch strDate {
-//        case strCurrentDate:
-//            self.navigationItem.title = "Today"
-//        case strTomorrowDate:
-//            self.navigationItem.title = "Tomorrow"
-//        case strYesterdayDate:
-//            self.navigationItem.title = "Yesterday"
-//        default:
-//            self.navigationItem.title = dateFormatter.string(from: date)
-//        }
-        let navigationTitleModel = NavigationTitleModel(currentDate: currentDate, selectedDate: date, dateFormatter: dateFormatter)
-        self.navigationItem.title = navigationTitleModel.dayTitle
+        let strCurrentDate = dateFormatter.string(from: currentDate)
+        let strYesterdayDate = dateFormatter.string(from: yesterdayDate)
+        let strTomorrowDate = dateFormatter.string(from: tomorrowDate)
+        let strDate = dateFormatter.string(from: date)
+
+        switch strDate {
+        case strCurrentDate:
+            self.navigationItem.title = "Today"
+        case strTomorrowDate:
+            self.navigationItem.title = "Tomorrow"
+        case strYesterdayDate:
+            self.navigationItem.title = "Yesterday"
+        default:
+            self.navigationItem.title = dateFormatter.string(from: date)
+        }
     }
     
     @objc func onRightBarButtonItemPressed() {

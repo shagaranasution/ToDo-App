@@ -9,10 +9,19 @@
 import UIKit
 
 class EmptyToDoCell: UITableViewCell {
-
+    
+    @IBOutlet weak var contentWrapperView: UIView!
+    var height: CGFloat?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
+        let screenSize = UIScreen.main.bounds
+        let screenHeight = screenSize.height
+        let heightConstraint = NSLayoutConstraint(item: contentWrapperView!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: screenHeight * 0.5)
+        
+        contentWrapperView.addConstraint(heightConstraint)
+        contentWrapperView.backgroundColor = .clear
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
