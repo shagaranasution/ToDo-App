@@ -15,6 +15,10 @@ The app perform CRUD operation with Realm Database integration.
 * [RealmSwift](https://realm.io/docs/swift/latest/)
 * [SwipeCellKit](https://github.com/SwipeCellKit/SwipeCellKit)
 
+# Requirements
+* iOS 13.0+
+* Xcode 11.0+
+
 # Try Yourself
 * Clone repository
 * Build and run
