@@ -10,11 +10,13 @@ import UIKit
 
 extension ToDoViewController: UITabBarDelegate {
     func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
-        let createToDoVC = CreateToDoViewController()
-        
-        createToDoVC.delegate = self
-        createToDoVC.selectedDate = self.selectedDate
-        
-        present(createToDoVC, animated: true, completion: nil)
+        if let selectedDate = self.selectedDate {
+            let createToDoVC = CreateToDoViewController()
+            
+            createToDoVC.delegate = self
+            createToDoVC.selectedDate = selectedDate
+            
+            present(createToDoVC, animated: true, completion: nil)
+        }
     }
 }

@@ -20,16 +20,12 @@ class CreateToDoViewController: UIViewController {
     @IBOutlet weak var addEndTimeTextField: UITextField!
     @IBOutlet weak var addButton: UIButton!
     
-    public let realm = try! Realm()
-    public let calender: Calendar = .current
+    let realm = try! Realm()
+    private let calender: Calendar = .current
     
-    var selectedDate: Date? {
-        didSet {
-            guard let unwrappedSelectedDate = selectedDate else {
-                return
-            }
-            
-            let components = calender.dateComponents([.year, .month, .day], from: unwrappedSelectedDate)
+    var selectedDate: Date! {
+        didSet {            
+            let components = calender.dateComponents([.year, .month, .day], from: selectedDate)
             
             if let year = components.year, let month = components.month, let day = components.day {
                 self.selectedYear = year
@@ -92,7 +88,7 @@ class CreateToDoViewController: UIViewController {
         }
     }
     
-    func save(item: Item) {
+    private func save(item: Item) {
         do {
             try realm.write{
                 realm.add(item)
@@ -102,7 +98,7 @@ class CreateToDoViewController: UIViewController {
         }
     }
     
-    func configureView() {
+    private func configureView() {
         // customizing task name textfield
         taskNameTextField.makeToDoTextField(placeholder: "Name of the task")
         
@@ -116,7 +112,7 @@ class CreateToDoViewController: UIViewController {
         addButton.layer.cornerRadius = 10.0
     }
     
-    func setSelectedDateTime(day: Int?, month: Int?, year: Int, from date: Date) -> Date? {
+    private func setSelectedDateTime(day: Int?, month: Int?, year: Int, from date: Date) -> Date? {
         let components = calender.dateComponents([.hour, .minute, .second], from: date)
         
         if let hour = components.hour, let minute = components.hour, let second = components.second {

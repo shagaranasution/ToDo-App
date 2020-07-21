@@ -16,14 +16,13 @@ class ToDoViewController: UIViewController {
     @IBOutlet weak var tabBar: UITabBar!
     @IBOutlet weak var addToDo: UITabBarItem!
     
-    var rightBarButtonItem: UIBarButtonItem?
+    private var rightBarButtonItem: UIBarButtonItem?
     
     let realm = try! Realm()
     let dateFormatter = DateFormatter()
     var calender: Calendar = .current
     
     var selectedDate: Date?
-    var isRightBarButtonItemShow = false
     
     var toDoItems: Results<Item>?
     var dates = [Date]()
@@ -39,6 +38,8 @@ class ToDoViewController: UIViewController {
         toDoListView.dataSource = self
         tabBar.delegate = self
         
+        selectedDate = Date()
+        
         dayCollectionView.register(UINib(nibName: "FullDateCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "dayCell")
         toDoListView.register(UINib(nibName: "ToDoCell", bundle: nil), forCellReuseIdentifier: "ToDoCell")
         toDoListView.register(UINib(nibName: "EmptyToDoCell", bundle: nil), forCellReuseIdentifier: "reuseEmptyToDoCell")
@@ -47,7 +48,7 @@ class ToDoViewController: UIViewController {
     }
     
     func loadItems(date: Date) {
-        let dateFormatter = DateFormatter()
+//        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd 00:00:00 Z"
         
         let stringFormattedDate = dateFormatter.string(from: date)
@@ -64,7 +65,7 @@ class ToDoViewController: UIViewController {
         toDoListView.reloadData()
     }
     
-    func configureView() {
+    private func configureView() {
         view.backgroundColor = UIColor(named: "containerColor")
         
         toDoListView.backgroundColor = UIColor(named: "containerColor")
@@ -124,7 +125,7 @@ class ToDoViewController: UIViewController {
         }
     }
     
-    @objc func onRightBarButtonItemPressed() {
+    @objc private func onRightBarButtonItemPressed() {
         let todayDate = Date()
         self.selectedDate = todayDate
         
@@ -142,81 +143,5 @@ extension ToDoViewController: CreateToDoViewControllerDelegate {
         createToDoViewController.dismiss(animated: true, completion: nil)
         
         toDoListView.reloadData()
-    }
-}
-
-//MARK: - Day Collection View Data Configuration
-
-extension ToDoViewController {
-    func fillDates() {
-        var dates: [Date] = []
-        var days = DateComponents()
-        var dayCount = 0
-        
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        
-        let minDate = Date().addingTimeInterval(-123456789.0)
-        let maxDate = Date().addingTimeInterval(123456789.0)
-
-        repeat {
-            days.day = dayCount
-            dayCount += 1
-            
-            guard let date = calender.date(byAdding: days, to: minDate) else {
-                break;
-            }
-            
-            if date.compare(maxDate) == .orderedDescending {
-                break
-            }
-            
-            let stringDate = dateFormatter.string(from: date)
-            
-            guard let formattedDate = dateFormatter.date(from: stringDate) else {
-                return
-            }
-            
-            dates.append(formattedDate)
-        } while (true)
-        
-        self.dates = dates
-        
-        self.dayCollectionView.reloadData()
-
-        let stringCurrentDate = dateFormatter.string(from: Date())
-        guard let formattedStringCurrentDate = dateFormatter.date(from: stringCurrentDate) else {
-            return
-        }
-    
-        for i in 0..<self.dates.count {
-            let date = self.dates[i]
-            
-            if date.compare(formattedStringCurrentDate) == .orderedSame {
-                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
-                    self.dayCollectionView.selectItem(at: IndexPath(row: i, section: 0), animated: true, scrollPosition: .centeredHorizontally)
-                })
-            }
-        }
-    }
-    
-    func updateCollectionView() {
-        let currentDate = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/MM/yyyy"
-        
-        for i in 0..<dates.count {
-            let date = dates[i]
-            
-            if dateFormatter.string(from: date) == dateFormatter.string(from: currentDate) {
-                let indexPath = IndexPath(row: i, section: 0)
-                
-                dayCollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.3, execute: {
-                    self.dayCollectionView.selectItem(at: indexPath, animated: true, scrollPosition: .centeredHorizontally)
-                })
-                
-                break
-            }
-        }
     }
 }

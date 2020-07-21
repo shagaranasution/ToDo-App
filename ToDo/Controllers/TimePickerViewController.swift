@@ -9,8 +9,8 @@
 import UIKit
 
 protocol TimePickerViewControllerDelegate: class {
-    func timePickerViewControllerDidSet(_ timePickerViewConroller: TimePickerViewController, timeContextType: TimeContextType, timeSet: Date)
-    func timePickerViewControllerDidCancel(_ timePickerViewController: TimePickerViewController)
+    func timePickerViewDidSet(_ timePickerViewConroller: TimePickerViewController, timeContextType: TimeContextType, timeSet: Date)
+    func timePickerViewDidCancel(_ timePickerViewController: TimePickerViewController)
 }
 
 enum TimeContextType {
@@ -38,11 +38,6 @@ class TimePickerViewController: UIViewController {
         configureView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-    }
-    
     @IBAction func timePickerChanged(_ sender: UIDatePicker) {
         dateFormatter.timeStyle = DateFormatter.Style.short
         
@@ -52,14 +47,14 @@ class TimePickerViewController: UIViewController {
     }
     
     @IBAction func setTimePressed(_ sender: UIButton) {
-        self.delegate?.timePickerViewControllerDidSet(self, timeContextType: timeContextType, timeSet: timePicker.date)
+        self.delegate?.timePickerViewDidSet(self, timeContextType: timeContextType, timeSet: timePicker.date)
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
-        self.delegate?.timePickerViewControllerDidCancel(self)
+        self.delegate?.timePickerViewDidCancel(self)
     }
     
-    func configureView() {
+    private func configureView() {
         // adding an overlay to the view to give focus to the dialog box
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.40)
         

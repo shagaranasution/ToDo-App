@@ -8,7 +8,7 @@
 
 import UIKit
 
-// Text Field Delegate Methods
+//MARK: - Text Field Delegate Methods
 
 extension CreateToDoViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
@@ -28,26 +28,10 @@ extension CreateToDoViewController: UITextFieldDelegate {
         switch textField {
         case addStartTimeTextField:
             addStartTimeTextField.isEnabled  = false
-            
-            let timePickerVC = TimePickerViewController()
-            timePickerVC.modalPresentationStyle = .custom
-            timePickerVC.modalTransitionStyle = .crossDissolve
-            
-            timePickerVC.delegate = self
-            timePickerVC.timeContextType = .startTime
-            
-            present(timePickerVC, animated: true, completion: nil)
+            presentTimePickerView(for: .startTime)
         case addEndTimeTextField:
             addEndTimeTextField.isEnabled = false
-            
-            let timePickerVC = TimePickerViewController()
-            timePickerVC.modalPresentationStyle = .custom
-            timePickerVC.modalTransitionStyle = .crossDissolve
-            
-            timePickerVC.delegate = self
-            timePickerVC.timeContextType = .finishTime
-            
-            present(timePickerVC, animated: true, completion: nil)
+            presentTimePickerView(for: .finishTime)
         default:
             break
         }
@@ -59,5 +43,47 @@ extension CreateToDoViewController: UITextFieldDelegate {
         }
         
         return true
+    }
+    
+    private func presentTimePickerView(for timeContextType: TimeContextType) {
+        let timePickerVC = TimePickerViewController()
+        timePickerVC.modalPresentationStyle = .custom
+        timePickerVC.modalTransitionStyle = .crossDissolve
+        
+        timePickerVC.delegate = self
+        timePickerVC.timeContextType = timeContextType
+        
+        present(timePickerVC, animated: true, completion: nil)
+    }
+}
+
+//MARK: - Time Picker View Delegate Methods
+
+extension CreateToDoViewController: TimePickerViewControllerDelegate {
+    func timePickerViewDidSet(_ timePickerViewConroller: TimePickerViewController, timeContextType: TimeContextType, timeSet: Date) {
+        dismiss(animated: true, completion: nil)
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let stringTime = dateFormatter.string(from: timeSet)
+        
+        if timeContextType == .startTime {
+            startDateTime = timeSet
+            addStartTimeTextField.text = stringTime
+        } else {
+            finishDateTime = timeSet
+            addEndTimeTextField.text = stringTime
+        }
+        
+        self.addStartTimeTextField.isEnabled = true
+        self.addEndTimeTextField.isEnabled = true
+    }
+    
+    func timePickerViewDidCancel(_ timePickerViewController: TimePickerViewController) {
+        dismiss(animated: true, completion: nil)
+        
+        self.addStartTimeTextField.isEnabled = true
+        self.addEndTimeTextField.isEnabled = true
     }
 }
