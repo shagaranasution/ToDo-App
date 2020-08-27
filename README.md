@@ -9,6 +9,7 @@ The app perform CRUD operation with Realm Database integration.
 # Features
 * [x] Add/Remove note
 * [x] Marked note as done
+* [x] Edit note
 
 # Specs
 * MVC (Model-View-Controller)
