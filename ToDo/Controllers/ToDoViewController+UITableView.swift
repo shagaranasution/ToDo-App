@@ -64,7 +64,27 @@ extension ToDoViewController: UITableViewDataSource {
     }
 }
 
-//MARK: - Extenstion String
+//MARK: - TableView Delegate Methods
+
+extension ToDoViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let items = toDoItems {
+            let item = items[indexPath.row]
+            
+            let formToDoVC = CreateToDoViewController()
+            
+            formToDoVC.formToDoType = .update
+            formToDoVC.taskName = item.title
+            formToDoVC.startDateTime = item.startDateTime
+            formToDoVC.finishDateTime = item.startDateTime
+            
+            present(formToDoVC, animated: true, completion: nil)
+        }
+    }
+}
+
+
+//MARK: - Entension String
 
 extension String {
     func strikeThrough() -> NSAttributedString {
@@ -75,7 +95,7 @@ extension String {
     }
 }
 
-//MARK: - Extenstion UILabel
+//MARK: - Entension UILabel
 
 extension UILabel {
     func strikeThrough(_ isStrikeThrough:Bool) {

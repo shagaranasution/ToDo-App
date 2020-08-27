@@ -12,7 +12,17 @@ import RealmSwift
 class ToDoViewController: UIViewController {
     
     @IBOutlet weak var dayCollectionView: UICollectionView!
-    @IBOutlet weak var toDoListView: UITableView!
+    @IBOutlet weak var toDoListView: UITableView! {
+        didSet {
+            toDoListView.dataSource = self
+            toDoListView.delegate = self
+            
+            toDoListView.register(UINib(nibName: "ToDoCell", bundle: nil), forCellReuseIdentifier: "ToDoCell")
+            toDoListView.register(UINib(nibName: "EmptyToDoCell", bundle: nil), forCellReuseIdentifier: "reuseEmptyToDoCell")
+            
+            toDoListView.allowsSelection = true
+        }
+    }
     @IBOutlet weak var tabBar: UITabBar!
     @IBOutlet weak var addToDo: UITabBarItem!
     
@@ -35,14 +45,11 @@ class ToDoViewController: UIViewController {
         
         dayCollectionView.dataSource = self
         dayCollectionView.delegate = self
-        toDoListView.dataSource = self
         tabBar.delegate = self
         
         selectedDate = Date()
         
         dayCollectionView.register(UINib(nibName: "FullDateCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "dayCell")
-        toDoListView.register(UINib(nibName: "ToDoCell", bundle: nil), forCellReuseIdentifier: "ToDoCell")
-        toDoListView.register(UINib(nibName: "EmptyToDoCell", bundle: nil), forCellReuseIdentifier: "reuseEmptyToDoCell")
         
         loadItems(date: Date())
     }

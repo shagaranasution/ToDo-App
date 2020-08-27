@@ -25,6 +25,7 @@
                 <outlet property="addEndTimeTextField" destination="f2o-Db-qXA" id="Y1t-ER-uk7"/>
                 <outlet property="addStartTimeTextField" destination="Tqo-wW-STT" id="cHM-74-mjO"/>
                 <outlet property="taskNameTextField" destination="Mbt-pu-tr5" id="0XZ-4n-KJX"/>
+                <outlet property="titleFormLabel" destination="WKL-rm-DKT" id="SD0-ZG-iXX"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,16 +35,13 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create a Task" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WKL-rm-DKT" userLabel="Create a Task">
-                    <rect key="frame" x="20" y="60" width="132" height="84"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="132" id="AfE-iP-cb6"/>
-                    </constraints>
+                    <rect key="frame" x="20" y="60" width="219" height="42"/>
                     <fontDescription key="fontDescription" name="NanumGothicExtraBold" family="NanumGothic" pointSize="36"/>
                     <color key="textColor" red="0.24985460229799444" green="0.58536317372564972" blue="0.68848744697616582" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name of the task" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mbt-pu-tr5" userLabel="Task Name TextField">
-                    <rect key="frame" x="20" y="172" width="374" height="45"/>
+                    <rect key="frame" x="20" y="130" width="374" height="45"/>
                     <color key="backgroundColor" name="cardColor"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="vRs-LP-0sx"/>
@@ -52,7 +50,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="done"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Tqo-wW-STT" userLabel="Add Start Time TextField">
-                    <rect key="frame" x="20" y="249" width="374" height="45"/>
+                    <rect key="frame" x="20" y="207" width="374" height="45"/>
                     <color key="backgroundColor" name="cardColor"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="GyC-fv-atC"/>
@@ -61,7 +59,7 @@
                     <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                 </textField>
                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f2o-Db-qXA" userLabel="Add End Time TextField">
-                    <rect key="frame" x="20" y="326" width="374" height="45"/>
+                    <rect key="frame" x="20" y="284" width="374" height="45"/>
                     <color key="backgroundColor" name="cardColor"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="45" id="Wj8-Iu-OdW"/>

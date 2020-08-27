@@ -13,8 +13,14 @@ protocol CreateToDoViewControllerDelegate: class {
     func didCreateToDo(_ createToDoViewController: CreateToDoViewController)
 }
 
+enum FormToDo {
+    case create
+    case update
+}
+
 class CreateToDoViewController: UIViewController {
     
+    @IBOutlet weak var titleFormLabel: UILabel!
     @IBOutlet weak var taskNameTextField: UITextField!
     @IBOutlet weak var addStartTimeTextField: UITextField!
     @IBOutlet weak var addEndTimeTextField: UITextField!
@@ -22,6 +28,8 @@ class CreateToDoViewController: UIViewController {
     
     let realm = try! Realm()
     private let calender: Calendar = .current
+    
+    var formToDoType: FormToDo = .create
     
     var selectedDate: Date! {
         didSet {            
@@ -39,6 +47,7 @@ class CreateToDoViewController: UIViewController {
     private var selectedMonth = 0
     private var selectedDay = 0
     
+    var taskName: String?
     var startDateTime: Date?
     var finishDateTime: Date?
     
@@ -99,6 +108,25 @@ class CreateToDoViewController: UIViewController {
     }
     
     private func configureView() {
+        // cutomizing form
+        switch formToDoType {
+        case .create:
+            titleFormLabel.text = "Create \na Task"
+        case .update:
+            titleFormLabel.text = "Update \nThe Task"
+            if let unwrappedTaskName = taskName,
+                let unwrappedStartDateTime = startDateTime,
+                let unwrappedFinishDateTime = finishDateTime {
+                
+                taskNameTextField.text = unwrappedTaskName
+                
+                let dateFormatter = DateFormatter()
+                dateFormatter.timeStyle = DateFormatter.Style.short
+                addStartTimeTextField.text = dateFormatter.string(from: unwrappedStartDateTime)
+                addEndTimeTextField.text = dateFormatter.string(from: unwrappedFinishDateTime)
+            }
+        }
+        
         // customizing task name textfield
         taskNameTextField.makeToDoTextField(placeholder: "Name of the task")
         
