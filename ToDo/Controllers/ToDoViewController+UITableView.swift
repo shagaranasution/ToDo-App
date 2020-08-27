@@ -72,7 +72,7 @@ extension ToDoViewController: UITableViewDelegate {
             let item = items[indexPath.row]
             
             if !item.done {
-                let formToDoVC = CreateToDoViewController()
+                let formToDoVC = FormToDoViewController()
                 
                 formToDoVC.delegate = self
                 formToDoVC.formToDoType = .update

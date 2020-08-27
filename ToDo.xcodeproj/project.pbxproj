@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		39B1C59071D5E46C1A9C4B9F /* Pods_ToDo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A6635FE2C01D1EC307B1966 /* Pods_ToDo.framework */; };
-		FF2B9318249B7A4A00BE56E7 /* CreateToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B9316249B7A4A00BE56E7 /* CreateToDoViewController.swift */; };
-		FF2B9319249B7A4A00BE56E7 /* CreateToDoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2B9317249B7A4A00BE56E7 /* CreateToDoViewController.xib */; };
+		FF2B9318249B7A4A00BE56E7 /* FormToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B9316249B7A4A00BE56E7 /* FormToDoViewController.swift */; };
+		FF2B9319249B7A4A00BE56E7 /* FormToDoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2B9317249B7A4A00BE56E7 /* FormToDoViewController.xib */; };
 		FF2B934024A0C22300BE56E7 /* TimePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B933E24A0C22300BE56E7 /* TimePickerViewController.swift */; };
 		FF2B934124A0C22300BE56E7 /* TimePickerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF2B933F24A0C22300BE56E7 /* TimePickerViewController.xib */; };
 		FF2B934F24A33C4000BE56E7 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF2B934E24A33C4000BE56E7 /* Item.swift */; };
@@ -21,7 +21,7 @@
 		FF3EF8CE24B86E8D008A0F8B /* ToDoViewController+UITabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF3EF8CD24B86E8D008A0F8B /* ToDoViewController+UITabBar.swift */; };
 		FF7B282324A602DD00174796 /* ToDoViewController+SwipeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B282224A602DD00174796 /* ToDoViewController+SwipeTableViewCell.swift */; };
 		FF7B282524A6047E00174796 /* ToDoViewController+UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B282424A6047E00174796 /* ToDoViewController+UITableView.swift */; };
-		FF7B282724A606E900174796 /* CreateToDoViewController+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B282624A606E900174796 /* CreateToDoViewController+UITextField.swift */; };
+		FF7B282724A606E900174796 /* FormToDoViewController+UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7B282624A606E900174796 /* FormToDoViewController+UITextField.swift */; };
 		FFE3B068249A2C7100BDF6CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3B067249A2C7100BDF6CF /* AppDelegate.swift */; };
 		FFE3B06A249A2C7100BDF6CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE3B069249A2C7100BDF6CF /* SceneDelegate.swift */; };
 		FFE3B071249A2C7C00BDF6CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE3B070249A2C7C00BDF6CF /* Assets.xcassets */; };
@@ -39,8 +39,8 @@
 		2114E4835183C1D4766C9417 /* Pods-ToDo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.release.xcconfig"; path = "Target Support Files/Pods-ToDo/Pods-ToDo.release.xcconfig"; sourceTree = "<group>"; };
 		6A6635FE2C01D1EC307B1966 /* Pods_ToDo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D27F76B42629CD24A7E51E13 /* Pods-ToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.debug.xcconfig"; path = "Target Support Files/Pods-ToDo/Pods-ToDo.debug.xcconfig"; sourceTree = "<group>"; };
-		FF2B9316249B7A4A00BE56E7 /* CreateToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateToDoViewController.swift; sourceTree = "<group>"; };
-		FF2B9317249B7A4A00BE56E7 /* CreateToDoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateToDoViewController.xib; sourceTree = "<group>"; };
+		FF2B9316249B7A4A00BE56E7 /* FormToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormToDoViewController.swift; sourceTree = "<group>"; };
+		FF2B9317249B7A4A00BE56E7 /* FormToDoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FormToDoViewController.xib; sourceTree = "<group>"; };
 		FF2B933E24A0C22300BE56E7 /* TimePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePickerViewController.swift; sourceTree = "<group>"; };
 		FF2B933F24A0C22300BE56E7 /* TimePickerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TimePickerViewController.xib; sourceTree = "<group>"; };
 		FF2B934E24A33C4000BE56E7 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		FF3EF8CD24B86E8D008A0F8B /* ToDoViewController+UITabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoViewController+UITabBar.swift"; sourceTree = "<group>"; };
 		FF7B282224A602DD00174796 /* ToDoViewController+SwipeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoViewController+SwipeTableViewCell.swift"; sourceTree = "<group>"; };
 		FF7B282424A6047E00174796 /* ToDoViewController+UITableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToDoViewController+UITableView.swift"; sourceTree = "<group>"; };
-		FF7B282624A606E900174796 /* CreateToDoViewController+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CreateToDoViewController+UITextField.swift"; sourceTree = "<group>"; };
+		FF7B282624A606E900174796 /* FormToDoViewController+UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FormToDoViewController+UITextField.swift"; sourceTree = "<group>"; };
 		FFE3B064249A2C7100BDF6CF /* ToDo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE3B067249A2C7100BDF6CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE3B069249A2C7100BDF6CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -140,9 +140,9 @@
 				FF7B282424A6047E00174796 /* ToDoViewController+UITableView.swift */,
 				FF7B282224A602DD00174796 /* ToDoViewController+SwipeTableViewCell.swift */,
 				FF3EF8CD24B86E8D008A0F8B /* ToDoViewController+UITabBar.swift */,
-				FF2B9316249B7A4A00BE56E7 /* CreateToDoViewController.swift */,
-				FF2B9317249B7A4A00BE56E7 /* CreateToDoViewController.xib */,
-				FF7B282624A606E900174796 /* CreateToDoViewController+UITextField.swift */,
+				FF2B9316249B7A4A00BE56E7 /* FormToDoViewController.swift */,
+				FF2B9317249B7A4A00BE56E7 /* FormToDoViewController.xib */,
+				FF7B282624A606E900174796 /* FormToDoViewController+UITextField.swift */,
 				FF2B933E24A0C22300BE56E7 /* TimePickerViewController.swift */,
 				FF2B933F24A0C22300BE56E7 /* TimePickerViewController.xib */,
 			);
@@ -249,7 +249,7 @@
 				FFFD7E6124A4B700008D4DAA /* NanumGothic-Bold.ttf in Resources */,
 				FFE3B07F249A37AF00BDF6CF /* ToDoViewController.xib in Resources */,
 				FFE3B071249A2C7C00BDF6CF /* Assets.xcassets in Resources */,
-				FF2B9319249B7A4A00BE56E7 /* CreateToDoViewController.xib in Resources */,
+				FF2B9319249B7A4A00BE56E7 /* FormToDoViewController.xib in Resources */,
 				FFE3B084249B2B2800BDF6CF /* ToDoCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,9 +306,9 @@
 				FF7B282324A602DD00174796 /* ToDoViewController+SwipeTableViewCell.swift in Sources */,
 				FF2B934F24A33C4000BE56E7 /* Item.swift in Sources */,
 				FF3EF8C724B59BF7008A0F8B /* FullDateCollectionViewCell.swift in Sources */,
-				FF2B9318249B7A4A00BE56E7 /* CreateToDoViewController.swift in Sources */,
+				FF2B9318249B7A4A00BE56E7 /* FormToDoViewController.swift in Sources */,
 				FFE3B068249A2C7100BDF6CF /* AppDelegate.swift in Sources */,
-				FF7B282724A606E900174796 /* CreateToDoViewController+UITextField.swift in Sources */,
+				FF7B282724A606E900174796 /* FormToDoViewController+UITextField.swift in Sources */,
 				FF3EF8CE24B86E8D008A0F8B /* ToDoViewController+UITabBar.swift in Sources */,
 				FFE3B06A249A2C7100BDF6CF /* SceneDelegate.swift in Sources */,
 				FFE3B07E249A37AF00BDF6CF /* ToDoViewController.swift in Sources */,

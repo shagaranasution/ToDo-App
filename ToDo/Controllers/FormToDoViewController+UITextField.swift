@@ -1,5 +1,5 @@
 //
-//  CreateToDoViewController+UITextField.swift
+//  FormToDoViewController+UITextField.swift
 //  ToDo
 //
 //  Created by Shagara F Nasution on 26/06/20.
@@ -10,7 +10,7 @@ import UIKit
 
 //MARK: - Text Field Delegate Methods
 
-extension CreateToDoViewController: UITextFieldDelegate {
+extension FormToDoViewController: UITextFieldDelegate {
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         switch textField {
         case addStartTimeTextField:
@@ -59,7 +59,7 @@ extension CreateToDoViewController: UITextFieldDelegate {
 
 //MARK: - Time Picker View Delegate Methods
 
-extension CreateToDoViewController: TimePickerViewControllerDelegate {
+extension FormToDoViewController: TimePickerViewControllerDelegate {
     func timePickerViewDidSet(_ timePickerViewConroller: TimePickerViewController, timeContextType: TimeContextType, timeSet: Date) {
         dismiss(animated: true, completion: nil)
         

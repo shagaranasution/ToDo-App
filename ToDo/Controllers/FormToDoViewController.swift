@@ -9,8 +9,8 @@
 import UIKit
 import RealmSwift
 
-protocol CreateToDoViewControllerDelegate: class {
-    func didCreateToDo(_ createToDoViewController: FormToDoViewController)
+protocol FormToDoViewControllerDelegate: class {
+    func didCreateToDo(_ formToDoViewController: FormToDoViewController)
 }
 
 enum FormToDo {
@@ -66,7 +66,7 @@ class FormToDoViewController: UIViewController {
     var startDateTime: Date?
     var finishDateTime: Date?
     
-    weak var delegate: CreateToDoViewControllerDelegate?
+    weak var delegate: FormToDoViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -145,8 +145,8 @@ class ToDoViewController: UIViewController {
 
 //MARK: - CreateToDoVC Delegate Methods
 
-extension ToDoViewController: CreateToDoViewControllerDelegate {
-    func didCreateToDo(_ createToDoViewController: CreateToDoViewController) {
+extension ToDoViewController: FormToDoViewControllerDelegate {
+    func didCreateToDo(_ createToDoViewController: FormToDoViewController) {
         createToDoViewController.dismiss(animated: true, completion: nil)
         
         toDoListView.reloadData()

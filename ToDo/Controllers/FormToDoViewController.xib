@@ -19,7 +19,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateToDoViewController" customModule="ToDo" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FormToDoViewController" customModule="ToDo" customModuleProvider="target">
             <connections>
                 <outlet property="addButton" destination="gam-ED-tVL" id="nbw-fD-Le7"/>
                 <outlet property="addEndTimeTextField" destination="f2o-Db-qXA" id="Y1t-ER-uk7"/>
