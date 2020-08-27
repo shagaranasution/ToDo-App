@@ -155,8 +155,11 @@ class FormToDoViewController: UIViewController {
         switch formToDoType {
         case .create:
             titleFormLabel.text = "Create \na Task"
+            addButton.setTitle("Add New Task", for: .normal)
         case .update:
-            titleFormLabel.text = "Update \nThe Task"
+            titleFormLabel.text = "Update \nTask"
+            addButton.setTitle("Update Task", for: .normal)
+            
             if let unwrappedTaskName = taskName,
                 let unwrappedStartDateTime = startDateTime,
                 let unwrappedFinishDateTime = finishDateTime {
