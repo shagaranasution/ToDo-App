@@ -30,6 +30,21 @@ class CreateToDoViewController: UIViewController {
     private let calender: Calendar = .current
     
     var formToDoType: FormToDo = .create
+    var toDoItem: Item? {
+        didSet {
+            taskName = toDoItem!.title
+            startDateTime = toDoItem!.startDateTime
+            finishDateTime = toDoItem!.finishDateTime
+            
+            let components = calender.dateComponents([.day, .month, .year], from: toDoItem!.startDateTime)
+            
+            if let day = components.day, let month = components.month, let year = components.year {
+                selectedDay = day
+                selectedMonth = month
+                selectedYear = year
+            }
+        }
+    }
     
     var selectedDate: Date! {
         didSet {            
@@ -73,7 +88,6 @@ class CreateToDoViewController: UIViewController {
     
     @IBAction func addButtonPressed(_ sender: Any) {
         if let taskName = taskNameTextField.text, let startTime = startDateTime, let finishTime = finishDateTime {
-            
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
             let newItem = Item()
@@ -91,7 +105,12 @@ class CreateToDoViewController: UIViewController {
             
             newItem.finishDateTime = selectedFinishDateTime
             
-            save(item: newItem)
+            switch formToDoType {
+            case .create:
+                save(item: newItem)
+            case .update:
+                update(title: taskName, startDateTime: selectedStartDateTime, finishDateTime: selectedFinishDateTime)
+            }
             
             self.delegate?.didCreateToDo(self)
         }
@@ -104,6 +123,30 @@ class CreateToDoViewController: UIViewController {
             }
         } catch {
             print("Error when saving item, \(error)")
+        }
+    }
+    
+    private func update(title: String, startDateTime: Date, finishDateTime: Date) {
+        if let item = toDoItem {
+            do {
+                try realm.write{
+                    item.title = title
+                    item.startDateTime = startDateTime
+                    item.finishDateTime = finishDateTime
+                }
+            } catch {
+                print("Error when updating item, \(error)")
+            }
+        }
+    }
+    
+    private func update(item: Item) {
+        do {
+            try realm.write {
+                item.title = item.title
+            }
+        } catch {
+            print("Error when updating item, \(error)")
         }
     }
     

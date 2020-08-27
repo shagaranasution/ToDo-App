@@ -67,7 +67,7 @@ extension CreateToDoViewController: TimePickerViewControllerDelegate {
         dateFormatter.timeStyle = DateFormatter.Style.short
         
         let stringTime = dateFormatter.string(from: timeSet)
-        
+
         if timeContextType == .startTime {
             startDateTime = timeSet
             addStartTimeTextField.text = stringTime
