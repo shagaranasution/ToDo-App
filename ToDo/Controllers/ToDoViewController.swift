@@ -55,7 +55,6 @@ class ToDoViewController: UIViewController {
     }
     
     func loadItems(date: Date) {
-//        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd 00:00:00 Z"
         
         let stringFormattedDate = dateFormatter.string(from: date)

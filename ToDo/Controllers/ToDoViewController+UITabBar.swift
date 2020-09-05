@@ -16,7 +16,14 @@ extension ToDoViewController: UITabBarDelegate {
             formToDoVC.delegate = self
             formToDoVC.selectedDate = selectedDate
             
-            present(formToDoVC, animated: true, completion: nil)
+            let navigationController = UINavigationController(rootViewController: formToDoVC)
+            
+            navigationController.navigationBar.isTranslucent = false
+            navigationController.navigationBar.barTintColor = UIColor(named: "navBarColor")
+            navigationController.navigationBar.tintColor = .white
+            navigationController.navigationBar.shadowImage = UIImage()
+            
+            present(navigationController, animated: true, completion: nil)
         }
     }
 }

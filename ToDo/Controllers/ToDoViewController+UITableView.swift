@@ -78,12 +78,11 @@ extension ToDoViewController: UITableViewDelegate {
                 formToDoVC.formToDoType = .update
                 formToDoVC.toDoItem = item
                 
-                present(formToDoVC, animated: true, completion: nil)
+                self.navigationController?.pushViewController(formToDoVC, animated: true)
             }
         }
     }
 }
-
 
 //MARK: - Entension String
 

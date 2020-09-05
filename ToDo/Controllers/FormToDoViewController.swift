@@ -78,12 +78,10 @@ class FormToDoViewController: UIViewController {
         addEndTimeTextField.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
         
-        DispatchQueue.main.async {
-            self.taskNameTextField.becomeFirstResponder()
-        }
+        self.taskNameTextField.becomeFirstResponder()
     }
     
     @IBAction func addButtonPressed(_ sender: Any) {
@@ -110,6 +108,7 @@ class FormToDoViewController: UIViewController {
                 save(item: newItem)
             case .update:
                 update(title: taskName, startDateTime: selectedStartDateTime, finishDateTime: selectedFinishDateTime)
+                self.navigationController?.popViewController(animated: true)
             }
             
             self.delegate?.didCreateToDo(self)
@@ -156,6 +155,10 @@ class FormToDoViewController: UIViewController {
         case .create:
             titleFormLabel.text = "Create \na Task"
             addButton.setTitle("Add New Task", for: .normal)
+            
+            let cancelButton = UIBarButtonItem(title: "Cancel", style: .done, target: self, action: #selector(cancelButtonTapped))
+            
+            self.navigationItem.rightBarButtonItem = cancelButton
         case .update:
             titleFormLabel.text = "Update \nTask"
             addButton.setTitle("Update Task", for: .normal)
@@ -206,6 +209,10 @@ class FormToDoViewController: UIViewController {
         }
        
         return nil
+    }
+    
+    @objc private func cancelButtonTapped() {
+        dismiss(animated: true, completion: nil)
     }
 }
 
