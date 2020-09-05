@@ -7,13 +7,14 @@ The app perform CRUD operation with Realm Database integration.
 <img width="200" alt="Screen Shot 2020-09-05 at 3 50 41 PM" src="https://user-images.githubusercontent.com/26893548/92301933-f8b30680-ef91-11ea-8e27-9c3618657fa2.png">
 <img width="200" alt="Screen Shot 2020-09-05 at 3 51 39 PM" src="https://user-images.githubusercontent.com/26893548/92301947-25ffb480-ef92-11ea-88b4-76df7bd792c6.png">
 <br>
-<img width="200" alt="Screen Shot 2020-09-05 at 3 52 21 PM" src="https://user-images.githubusercontent.com/26893548/92301982-76771200-ef92-11ea-926e-08ebf0afdcbb.png">
-<img width="200" alt="Screen Shot 2020-09-05 at 3 52 30 PM" src="https://user-images.githubusercontent.com/26893548/92301984-79720280-ef92-11ea-888b-b8b3c13b1491.png">
+<img width="200" alt="Screen Shot 2020-09-05 at 4 13 41 PM" src="https://user-images.githubusercontent.com/26893548/92302042-19c82700-ef93-11ea-983d-d56a90e0b2d1.png">
+<img width="200" alt="Screen Shot 2020-09-05 at 4 14 01 PM" src="https://user-images.githubusercontent.com/26893548/92302044-1c2a8100-ef93-11ea-9bbc-f08735dfe0f4.png">
 
 # Features
 * [x] Add/Remove note
 * [x] Marked note as done
 * [x] Edit note
+* [x] Dark mode appearance
 
 # Specs
 * MVC (Model-View-Controller)
